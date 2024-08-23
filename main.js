@@ -25,6 +25,7 @@ app.get('/', (req, res)=>{
 
 // for handle form submission
 app.post('/api/submit', async (req, res) => {
+    console.log(req.body)
     try {
         const user = await User.create(req.body)
         res.status(200).send(`<h1 style="text-align: center; margin-top: 50vh;">Your Form Submitted Successfully.....</h1>`)
